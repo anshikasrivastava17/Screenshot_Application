@@ -14,6 +14,9 @@ def index(request):
         return render(request,'index.html',{'img':img})
     return render(request,'index.html')
 
+def index1(request):
+    return render (request, "index1.html")
+
 def signup(request):
     if not request.user.is_anonymous: #works when user is logged in 
         return redirect("/") 
