@@ -50,3 +50,6 @@ def signup(request):
         messages.success(request, f'Your account is created {name}. Head to login page!')
         
     return render(request,'signup.html')
+
+def edit(request):
+     return render(request,'edit.html')
