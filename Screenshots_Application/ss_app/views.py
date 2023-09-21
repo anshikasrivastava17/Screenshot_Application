@@ -1,20 +1,23 @@
 from django.shortcuts import render,  redirect
 import random
+import os
 import time
 import pyautogui
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import authenticate, logout, login, get_user_model
+from django.shortcuts import render
+
 
 def index(request):
     if request.method == "POST":
         time.sleep(3)
         ss = pyautogui.screenshot()
-        img = f'myimg{random.randint(1000,9999)}.png'
-        ss.save(settings.MEDIA_ROOT/img)
+        img_filename = f'myimg{random.randint(1000,9999)}.png'
+        img_path = os.path.join(settings.MEDIA_ROOT, img_filename)
+        ss.save(img_path)
         messages.success(request,'screenshot has been taken')
-        return render(request,'index.html',{'img':img})
-    
+        return render(request,'index.html',{'img_path': img_path})
     return render(request,'index.html')
 
 def index1(request):
@@ -53,3 +56,6 @@ def signup(request):
 
 def edit(request):
      return render(request,'edit.html')
+
+# def display_ss(request):
+    

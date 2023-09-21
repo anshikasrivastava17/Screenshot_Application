@@ -75,9 +75,9 @@
         <button class="p-3 btn btn-dark">Take A Screenshot</button>
     </form>
    
-    {% if img%}
+    {% if img_path%}
     <div class="text-center p-5 mt-5 container border shadow-sm">
-        <img src="http://127.0.0.1:8000/media/{{img}}" class="img-fluid">
+        <img src="http://127.0.0.1:8000/media/{{img_path}}" class="img-fluid">
     </div>
     {%endif%}
 </body>
