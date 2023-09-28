@@ -14,7 +14,8 @@ def index(request):
     if request.method == "POST":
         time.sleep(5)
         ss = pyautogui.screenshot()
-        img_path=fun.namingfile(ss)
+        name=str(request.user.username)
+        img_path=fun.namingfile(ss, name)
         messages.success(request,'screenshot has been taken')
         return render(request,'index.html',{'img_path': img_path})
     return render(request,'index.html')
@@ -50,6 +51,9 @@ def signup(request):
         user = User.objects.create_user(username=name, email=email, first_name=name, password=password)
         user.save()
         messages.success(request, f'Your account is created {name}. Head to login page!')
+
+        npath = os.path.join(settings.MEDIA_ROOT, name)
+        os.mkdir(npath)
         
     return render(request,'signup.html')
 
@@ -75,6 +79,8 @@ def logoutuser(request):
 
 def edit(request):
      return render(request,'edit.html')
+
+
 
 # def display_ss(request):
     
