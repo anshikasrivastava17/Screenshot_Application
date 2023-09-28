@@ -69,6 +69,10 @@ def signin(request):
             return render(request,'signin.html')
     return render(request,'signin.html')
 
+def logoutuser(request):
+    logout(request)
+    return redirect('/signin')
+
 def edit(request):
      return render(request,'edit.html')
 
