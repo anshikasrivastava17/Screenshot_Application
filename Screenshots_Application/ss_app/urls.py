@@ -8,5 +8,7 @@ urlpatterns = [
     path('ss',views.index, name="ss"),
     path('edit',views.edit,name='edit'),
     path('signup',views.signup,name='Signup'),
+    path('signin',views.signin,name='Signin'),
+    
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 
