@@ -53,6 +53,22 @@ def signup(request):
         
     return render(request,'signup.html')
 
+def signin(request):
+    if not request.user.is_anonymous:
+            return redirect('/ss')
+    if request.method=="POST":
+        username=request.POST.get('username')
+        password=request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        
+        if user is not None:
+            login(request,user)
+            return redirect('/ss')
+        else:
+            messages.error(request, 'Wrong username or password')
+            return render(request,'signin.html')
+    return render(request,'signin.html')
+
 def edit(request):
      return render(request,'edit.html')
 
