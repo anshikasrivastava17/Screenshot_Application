@@ -79,6 +79,8 @@ def logoutuser(request):
 
 def edit(request):
      img_path=request.GET.get('img_path')
+     if not fun.premium(str(request.user.username)):
+         return redirect('/upgrade')
      return render(request,'edit.html', {"img_path":img_path})
 
 

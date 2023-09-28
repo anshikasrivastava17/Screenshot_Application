@@ -11,3 +11,6 @@ def namingfile(ss, name):
     ss.save(img_path)
     return img_path
 
+def premium(name):
+    if not 'premium' in name:
+        return False
