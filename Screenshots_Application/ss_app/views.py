@@ -78,7 +78,8 @@ def logoutuser(request):
     return redirect('/signin')
 
 def edit(request):
-     return render(request,'edit.html')
+     img_path=request.GET.get('img_path')
+     return render(request,'edit.html', {"img_path":img_path})
 
 
 
