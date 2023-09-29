@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upgrade</title>
@@ -84,7 +85,7 @@
                 <p>Includes basic features <br>
                     Capture the screenshot <br> Save it</p>
             </div>
-            <button class="upgrade-button">Continue With Basic</button> <!-- Button for Basic -->
+            <a class="upgrade-button" href= "/ss">Continue With Basic</a> <!-- Button for Basic -->
             <p>Free</p>
         </div>
         <div class="pricing-box premium">
@@ -93,7 +94,7 @@
                 <p>Includes advanced features <br>
                     Capture the screenshot <br> A diverse editing palette <br> Save it</p>
             </div>
-            <button class="upgrade-button">Start With Premium</button> <!-- Button for Premium -->
+            <a  class="upgrade-button" href= "/edit">Start With Premium </a> <!-- Button for Premium -->
             <p>$10/month</p>
         </div>
     </div>

@@ -83,7 +83,8 @@ def edit(request):
          return redirect('/upgrade')
      return render(request,'edit.html', {"img_path":img_path})
 
-
+def upgrade(request):
+    return render(request,"upgrade.html")
 
 # def display_ss(request):
     

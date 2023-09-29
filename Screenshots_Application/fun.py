@@ -11,6 +11,12 @@ def namingfile(ss, name):
     ss.save(img_path)
     return img_path
 
+
 def premium(name):
-    if not 'premium' in name:
+    f = open("premium.txt", "r")
+    data = f.readlines()
+    print(data)
+    if (name in data) or ((name+'\n') in data):
+        return True
+    else:
         return False
