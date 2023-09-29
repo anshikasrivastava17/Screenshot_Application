@@ -22,16 +22,19 @@
 				<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
 					<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 					  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-					  <span class="fs-4">Team 3</span>
+					  <span class="fs-4">Screenshot_Application</span>
 					</a>
 			  
 					<ul class="nav nav-pills">
 					  <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                      <li class="nav-item"><a href="/udash" class="nav-link">User Dashboard</a></li>
+                      <li class="nav-item"><a href="/dashboard" class="nav-link">User Dashboard</a></li>
 					  <li class="nav-item"><a href="/logoutuser" class="nav-link">Logout</a></li>
 					</ul>
 				  </header>
 		</div>
-        <img id="image" src="http://127.0.0.1:8000/media/{{path}}"width="960" height="540" align = "center">
+        <center><img id="image" src="http://127.0.0.1:8000/media/{{path}}"width="960" height="540" align = ></center>
+        <div>
+        <br>
 
-        
+        <center><a  class="edit-button" href= "/edit/?img_path={{path}}" >Edit this Picture </a></center>
+
