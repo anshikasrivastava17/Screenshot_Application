@@ -1,5 +1,5 @@
 # Screenshot Application
-A cross-platform application in Python that captures a screenshot.
+An application in Python that captures a screenshot. Alongwith that it offers a diverse editing pallete to premium users.
 
 # Contributors
 
