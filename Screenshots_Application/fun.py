@@ -26,3 +26,8 @@ def addtopremium(name):
     data = "\n"+name
     f.write(data)
     f.close()
+
+def ss_list(name):
+    path=f"media/{name}"
+    ss_list=os.listdir(path)
+    return(ss_list)
