@@ -7,7 +7,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: url(1.jpg);
+    background-image: url(1.jpeg);
     background-color: black;
     background-position: center;
     background-size: cover;
@@ -144,7 +144,7 @@ nav.fa{
     padding-top: 100px;
     min-height: 100vh;
     width: 100%;
-    background-image: url(1.jpg);
+    background-image: url(1.jpeg);
     background-color: black;
     background-position: center;
     background-size: cover;
@@ -208,7 +208,7 @@ h3{
     text-align: center;
     min-height: 100vh;
     width: 100%;
-    background-image: url(2.jpg);
+    background-image: url(2.jpeg);
     background-color: black;
     background-position: center;
     background-size: cover;
@@ -268,7 +268,7 @@ h3{
     text-align: center;
     min-height: 100vh;
     width: 100%;
-    background-image: url(3.jpg);
+    background-image: url(3.jpeg);
     background-color: black;
     background-position: center;
     background-size: cover;
