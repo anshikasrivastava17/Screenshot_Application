@@ -171,11 +171,23 @@ function fullSizeClose() {
 
 // Set Image in URL/Source Box
 function source() {
-    image.src = inputBox.value;
-    originalImage.src = inputBox.value;
-    image2.src = inputBox.value;
-    inputBox.value = " ";
-}
+    var container = document.getElementById("image-area");
+
+            // Use window.scrollTo to scroll to the top of the page (optional)
+            window.scrollTo(0, 0);
+
+            // Use html2canvas library to capture a screenshot
+            html2canvas(container).then(function(canvas) {
+                // Convert the canvas to a data URL
+                var screenshotDataUrl = canvas.toDataURL("image/png");
+
+                // Create a download link for the screenshot
+                var a = document.createElement("a");
+                a.href = screenshotDataUrl;
+                a.download = "screenshot.png";
+                a.click();
+            });
+        }
 
 // Reset the Overlay Gradients to none;
 function resetOverlay() {
