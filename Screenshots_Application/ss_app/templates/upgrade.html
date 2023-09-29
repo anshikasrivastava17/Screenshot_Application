@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrade</title>
+    <style>
+        /* Center the content vertically and horizontally */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #a7a49e;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Styling for individual pricing boxes */
+        .pricing-box {
+            width: 300px;
+            height: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .basic {
+            background-color: #ffb6c1;
+        }
+
+        .premium {
+            background-color: #d7ce6d;
+        }
+
+        .upgrade-text {
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            top: 90px;
+        }
+
+        .pricing-text {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px; /* Add margin to push the paragraph slightly below */
+        }
+
+        /* Add this CSS code to style the buttons */
+        .upgrade-button {
+            background-color: #526D82;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6.2px;
+        }
+
+        /* Center the buttons horizontally within each pricing box */
+        .pricing-box .upgrade-button {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="upgrade-text">You are a Basic User. Wanna Upgrade?</div>
+    <div class="container">
+        <div class="pricing-box basic">
+            <h2>Basic</h2>
+            <div class="pricing-text">
+                <p>Includes basic features <br>
+                    Capture the screenshot <br> Save it</p>
+            </div>
+            <button class="upgrade-button">Continue With Basic</button> <!-- Button for Basic -->
+            <p>Free</p>
+        </div>
+        <div class="pricing-box premium">
+            <h2>Premium</h2>
+            <div class="pricing-text">
+                <p>Includes advanced features <br>
+                    Capture the screenshot <br> A diverse editing palette <br> Save it</p>
+            </div>
+            <button class="upgrade-button">Start With Premium</button> <!-- Button for Premium -->
+            <p>$10/month</p>
+        </div>
+    </div>
+</body>
+</html>
