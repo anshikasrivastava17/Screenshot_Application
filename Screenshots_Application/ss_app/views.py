@@ -90,3 +90,13 @@ def addpremium(request):
     name = (str(request.user.username))
     fun.addtopremium(name)
     return redirect("/edit")
+
+def dashboard(request):
+    if request.user.is_anonymous:
+        return redirect('/signin')
+    
+    name=request.user.username
+    ss_list=fun.ss_list(name)
+
+    dic={'ss_list':ss_list,'name':name}
+    return render(request,'dashboard.html',dic)
