@@ -11,6 +11,6 @@ urlpatterns = [
     path('signin',views.signin,name='Signin'),
     path('logoutuser',views.logoutuser,name='logout'),
     path('upgrade',views.upgrade,name='upgrade'),
-    
+    path('addpremium', views.addpremium, name='addpremium'),
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 
