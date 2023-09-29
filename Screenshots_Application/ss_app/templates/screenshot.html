@@ -24,29 +24,14 @@
 					  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
 					  <span class="fs-4">Team 3</span>
 					</a>
+			  
+					<ul class="nav nav-pills">
+					  <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                      <li class="nav-item"><a href="/udash" class="nav-link">User Dashboard</a></li>
+					  <li class="nav-item"><a href="/logoutuser" class="nav-link">Logout</a></li>
+					</ul>
 				  </header>
 		</div>
+        <img id="image" src="http://127.0.0.1:8000/media/{{path}}"width="960" height="540" align = "center">
 
-          <br><br>
-
-          <h1>Saved ScreenShots</h1>
-    <ul>
-
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">SCREENSHOTS</th>
-              </tr>
-            </thead>
         
-            <tbody>
-        {% for ss in ss_list %}
-        <tr>
-          <td><a href="/screenshot/?ss={{ ss }}">{{ss}}</a></td>
-        </tr>
-        {% endfor %}        
-        </tbody>
-    </ul>
-
-		</body>
-		</html>

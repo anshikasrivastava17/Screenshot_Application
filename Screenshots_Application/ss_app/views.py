@@ -100,3 +100,13 @@ def dashboard(request):
 
     dic={'ss_list':ss_list,'name':name}
     return render(request,'dashboard.html',dic)
+
+def screenshot(request):
+    if request.user.is_anonymous:
+        return redirect("/sigin")
+    
+    ss = request.GET.get('ss')  
+    name = request.user.username
+    path = f"{name}/{ss}"
+
+    return render(request, 'screenshot.html', {"path":path})

@@ -13,6 +13,7 @@ urlpatterns = [
     path('upgrade',views.upgrade,name='upgrade'),
     path('addpremium', views.addpremium, name='addpremium'),
     path('dashboard', views.dashboard, name='dashboard'),
-    
+     path('screenshot/',views.screenshot,name='screenshot'),
+
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
 
