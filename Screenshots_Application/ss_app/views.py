@@ -25,7 +25,7 @@ def home(request):
 
 def signup(request):
     if not request.user.is_anonymous: #works when user is logged in 
-        return redirect("/") 
+        return redirect("/dashboard") 
     if request.method=="POST":
 
         User = get_user_model()
@@ -59,7 +59,7 @@ def signup(request):
 
 def signin(request):
     if not request.user.is_anonymous:
-            return redirect('/ss')
+            return redirect('/dashboard')
     if request.method=="POST":
         username=request.POST.get('username')
         password=request.POST.get('password')
@@ -67,7 +67,7 @@ def signin(request):
         
         if user is not None:
             login(request,user)
-            return redirect('/ss')
+            return redirect('/dashboard')
         else:
             messages.error(request, 'Wrong username or password')
             return render(request,'signin.html')
@@ -89,7 +89,7 @@ def upgrade(request):
 def addpremium(request):
     name = (str(request.user.username))
     fun.addtopremium(name)
-    return redirect("/edit")
+    return redirect("/dashboard")
 
 def dashboard(request):
     if request.user.is_anonymous:
