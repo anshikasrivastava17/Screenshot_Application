@@ -86,5 +86,7 @@ def edit(request):
 def upgrade(request):
     return render(request,"upgrade.html")
 
-# def display_ss(request):
-    
+def addpremium(request):
+    name = (str(request.user.username))
+    fun.addtopremium(name)
+    return redirect("/edit")

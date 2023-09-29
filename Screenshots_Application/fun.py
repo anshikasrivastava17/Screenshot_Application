@@ -20,3 +20,9 @@ def premium(name):
         return True
     else:
         return False
+    
+def addtopremium(name):
+    f = open('premium.txt', 'a')
+    data = "\n"+name
+    f.write(data)
+    f.close()
