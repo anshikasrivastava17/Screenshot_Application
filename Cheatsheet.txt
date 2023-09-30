@@ -1,1 +1,11 @@
+ss_app 
 
+templates - 
+1) home.html - The very first page giving a brief of the overall project
+2) signin.html - Allows users to log in to their accounts by providing valid credentials, such as a username and password.
+3) signup.html - Allows users to create new accounts for registrations
+4) index.html - Page for the screenshot window, enabling linking
+5) upgrade.html - Give users a choice to upgrade their subscription or stick to the basic 
+6) edit.html- Basic structure for editing pallete for premium users
+7) dashboard.html - To display the screenshots in a gallery like view
+8) screenshot.html - Screenshot page giving options like home, edit ss, logout 
