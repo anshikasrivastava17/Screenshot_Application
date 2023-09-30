@@ -1,5 +1,12 @@
 ss_app 
 
+static - contains the files and images used 
+1) editprop.css - For enabling styling in the editing pallete
+2) editproperty.js - Javascript file to add functionality to the editing pallete
+3) main.css - For styling the screenshot window
+4) signup.css - Styling the signup page
+
+
 templates - 
 1) home.html - The very first page giving a brief of the overall project
 2) signin.html - Allows users to log in to their accounts by providing valid credentials, such as a username and password.
@@ -9,3 +16,5 @@ templates -
 6) edit.html- Basic structure for editing pallete for premium users
 7) dashboard.html - To display the screenshots in a gallery like view
 8) screenshot.html - Screenshot page giving options like home, edit ss, logout 
+
+
